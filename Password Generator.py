@@ -38,8 +38,7 @@ def replaceWithUppercaseLetter(pword):
 class TestSum(unittest.TestCase):
     
     def test_password(self):
-        pwlength = []
-        pwlength.append(3)
+        pwlength = [3,4,5,6,7,9]
         generatePassword(pwlength)
 
 
