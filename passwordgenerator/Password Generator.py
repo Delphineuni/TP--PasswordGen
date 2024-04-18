@@ -1,4 +1,6 @@
-import random, unittest, os
+import random
+
+
 
 
 def generatePassword(pwlength):
@@ -35,18 +37,10 @@ def replaceWithUppercaseLetter(pword):
         pword = pword[0:replace_index] + pword[replace_index].upper() + pword[replace_index+1:]
         return pword
 
-class TestSum(unittest.TestCase):
-
-    def test_password(self):
-        numPasswords=1
-
-    def test_length(self):
-        passwordLengths=3
-
 
 
 def main():
-    TestSum()
+    
     numPasswords = int(input("How many passwords do you want to generate? "))
     
     print("Generating " +str(numPasswords)+" passwords")
