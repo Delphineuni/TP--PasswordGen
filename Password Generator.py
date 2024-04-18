@@ -46,7 +46,7 @@ class TestSum(unittest.TestCase):
 
 def main():
     numPasswords = int(input("How many passwords do you want to generate? ") or "1")
-    
+    assert numPasswords == 1
     print("Generating " +str(numPasswords)+" passwords")
     
     passwordLengths = []
@@ -54,7 +54,8 @@ def main():
     print("Minimum length of password should be 3")
 
     for i in range(numPasswords):
-        length = int(input("Enter the length of Password #" + str(i+1) + " ") or "1")
+        length = int(input("Enter the length of Password #" + str(i+1) + " ") or "3")
+        assert length == 3
         if length<3:
             length = 3
         passwordLengths.append(length)
