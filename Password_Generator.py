@@ -8,8 +8,6 @@ def generatePassword(pwlength):
     passwords = [] 
 
     for i in pwlength:
-        #if type(i) != int:
-            #continue
         password = "" 
         for j in range(i):
             next_letter_index = random.randrange(len(alphabet))
