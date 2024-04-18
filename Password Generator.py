@@ -8,7 +8,8 @@ def generatePassword(pwlength):
     passwords = [] 
 
     for i in pwlength:
-        
+        if type(i) != int:
+            continue
         password = "" 
         for j in range(i):
             next_letter_index = random.randrange(len(alphabet))
@@ -38,14 +39,13 @@ def replaceWithUppercaseLetter(pword):
 class TestSum(unittest.TestCase):
     
     def test_password(self):
-        pwlength = [3,4,5,6,7,9]
+        pwlength = [3,4,5,6,7,9,"a"]
         generatePassword(pwlength)
 
 
 
 def main():
     numPasswords = int(input("How many passwords do you want to generate? ") or "1")
-    assert numPasswords == 1
     print("Generating " +str(numPasswords)+" passwords")
     
     passwordLengths = []
@@ -54,7 +54,6 @@ def main():
 
     for i in range(numPasswords):
         length = int(input("Enter the length of Password #" + str(i+1) + " ") or "3")
-        assert length == 3
         if length<3:
             length = 3
         passwordLengths.append(length)
