@@ -1,19 +1,7 @@
 name: test
 
 on:
-  push:
-    branches:
-      - main
-      - "[0-9]+.[0-9]+.x"
-      - "test-me-*"
-    tags:
-      - "[0-9]+.[0-9]+.[0-9]+"
-      - "[0-9]+.[0-9]+.[0-9]+rc[0-9]+"
-
-  pull_request:
-    branches:
-      - main
-      - "[0-9]+.[0-9]+.x"
+  [push]
 
 env:
   PYTEST_ADDOPTS: "--color=yes"
