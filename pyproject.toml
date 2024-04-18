@@ -1,7 +1,7 @@
-[project]
+﻿[project]
 name = "pytest"
 description = "pytest: simple powerful testing with Python"
-readme = "README.rst"
+readme = "README.md"
 keywords = [
     "test",
     "unittest",
