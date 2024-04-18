@@ -50,19 +50,22 @@ jobs:
              python: "3.9"
              os: windows-latest
              tox_env: "py39-xdist"
+             use_coverage: true
            - name: "windows-py310"
              python: "3.10"
              os: windows-latest
              tox_env: "py310-xdist"
+
            - name: "ubuntu-py39"
              python: "3.9"
              os: ubuntu-latest
              tox_env: "py39-xdist"
+             use_coverage: true
            - name: "ubuntu-py310"
              python: "3.10"
              os: ubuntu-latest
              tox_env: "py310-xdist"
-             
+
     steps:
     - uses: actions/checkout@v4
       with:
@@ -87,7 +90,7 @@ jobs:
         pip install tox coverage
 
     - name: Test without coverage
-      if: "! matrix.use_coverage"
+      if: ! matrix.use_coverage
       shell: bash
       run: tox run -e ${{ matrix.tox_env }} --installpkg `find dist/*.tar.gz`
 
