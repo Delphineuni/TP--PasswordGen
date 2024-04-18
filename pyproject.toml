@@ -16,16 +16,13 @@ authors = [
     {name = "Florian Bruhin"},
     {name = "Others (See AUTHORS)"},
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 classifiers = [
     "Development Status :: 6 - Mature",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
-    "Operating System :: MacOS",
-    "Operating System :: Microsoft :: Windows",
     "Operating System :: POSIX",
     "Operating System :: Unix",
-    "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Topic :: Software Development :: Libraries",
@@ -37,11 +34,11 @@ dynamic = [
 ]
 dependencies = [
     'colorama; sys_platform == "win32"',
-    'exceptiongroup>=1.0.0rc8; python_version < "3.11"',
+    'exceptiongroup>=1.0.0rc8; python_version < "3.10"',
     "iniconfig",
     "packaging",
     "pluggy<2.0,>=1.4",
-    'tomli>=1; python_version < "3.11"',
+    'tomli>=1; python_version < "3.10"',
 ]
 [project.optional-dependencies]
 dev = [
@@ -79,7 +76,7 @@ requires = [
 write_to = "src/_pytest/_version.py"
 
 [tool.black]
-target-version = ['py38']
+target-version = ['py39']
 
 [tool.ruff]
 src = ["src"]
