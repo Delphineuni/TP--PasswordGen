@@ -18,7 +18,7 @@ class TestSum(unittest.TestCase):
                     passgen.generatePassword(pws)
                 except Exception as e:
                     exceptions[pw] = e
-        print(exceptions)
+        print('')
         for exception in exceptions:
             print(RED,"Value",BLUE,exception,RED,"raised error",exceptions[exception],RESET)
     def test_main(self):
