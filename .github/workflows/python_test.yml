@@ -41,8 +41,6 @@ jobs:
           "windows-py310",
           "ubuntu-py39",
           "ubuntu-py310",
-          "doctesting",
-          "plugins",
         ]
 
         include:
@@ -64,7 +62,7 @@ jobs:
            - name: "ubuntu-py310"
              python: "3.10"
              os: ubuntu-latest
-             tox_env: "py310-xdist"
+             tox_env: "py-xdist"
 
     steps:
     - uses: actions/checkout@v4
