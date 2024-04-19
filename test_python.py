@@ -11,9 +11,9 @@ class TestSum(unittest.TestCase):
     print(RED," -------------------------------------------------------",RESET)
     def tests(self):
         #try:
-            print(BLUE,"Testing string:")
-            pwlength = [3,"a"]
-            passgen.generatePassword(pwlength)
+        print(BLUE,"Testing string:")
+        pwlength = [3,"a"]
+        passgen.generatePassword(pwlength)
         #except Exception as e:
         #    print(RED,"Value",BLUE,pwlength[1],RED,"raised error",e,RESET)       
         try:
