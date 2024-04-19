@@ -1,4 +1,5 @@
-﻿import unittest
+﻿import unittest, sys
+from io import StringIO
 import Password_Generator as passgen
 
 RED = "\033[31;40m"
@@ -21,3 +22,9 @@ class TestSum(unittest.TestCase):
     def test_main(self):
         print(BLUE,"Testing __main__ without input",RESET)
         passgen.main()
+    def test_main_simulated(self):
+        print(BLUE,"Testing __main__ with simulated input",RESET)
+        f = StringIO("3\n3\n12\n154")
+        sys.stdin = f
+        passgen.main()
+        f.close()
