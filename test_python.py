@@ -10,12 +10,12 @@ class TestSum(unittest.TestCase):
     print(RED," ------- Generated errors will be printed in red -------")
     print(RED," -------------------------------------------------------",RESET)
     def tests(self):
-        try:
+        #try:
             print(BLUE,"Testing string:")
             pwlength = [3,"a"]
             passgen.generatePassword(pwlength)
-        except Exception as e:
-            print(RED,"Value",BLUE,pwlength[1],RED,"raised error",e,RESET)       
+        #except Exception as e:
+        #    print(RED,"Value",BLUE,pwlength[1],RED,"raised error",e,RESET)       
         try:
             print(BLUE,"Testing float:")
             pwlength = [3,3.1]
