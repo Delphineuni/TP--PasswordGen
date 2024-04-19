@@ -2,7 +2,6 @@
 from io import StringIO
 import Password_Generator as passgen
 
-RED = "\033[31;40m"
 BLUE = "\033[34;40m"
 RESET = "\033[0m"
 
