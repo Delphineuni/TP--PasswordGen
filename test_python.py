@@ -31,9 +31,9 @@ class TestSum(unittest.TestCase):
     #    for exception in exceptions:
     #        print(RED,"Value",BLUE,exception,RED,"raised error",exceptions[exception],RESET)
     def test_main(self):
-    #    try:
+        try:
             passgen.main()
-    #    except EOFError:
-    #        print("\n",RED," EOF error is expected with empty input in GitHub Action")
-    #    except Exception as e:
-    #        print(e)
+        except EOFError:
+            print("\n",RED," EOF error is expected with empty input in GitHub Action")
+        except Exception as e:
+            print(e)
