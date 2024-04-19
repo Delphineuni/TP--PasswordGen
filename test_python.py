@@ -1,8 +1,8 @@
 ﻿import unittest
 import Password_Generator as passgen
 
-RED = "\033[1;31;40m"
-BLUE = "\033[1;34;40m"
+RED = "\033[31;40m"
+BLUE = "\033[34;40m"
 RESET = "\033[0m"
 
 class TestSum(unittest.TestCase):
