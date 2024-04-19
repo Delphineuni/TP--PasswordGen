@@ -21,7 +21,10 @@ class TestSum(unittest.TestCase):
         passgen.generatePassword(pwlength)          
     def test_main(self):
         print(BLUE,"Testing __main__ without input",RESET)
+        f = StringIO("\n\n")
+        sys.stdin = f
         passgen.main()
+        f.close()
     def test_main_simulated(self):
         print(BLUE,"Testing __main__ with simulated input",RESET)
         f = StringIO("3\n3\n12\n154")
